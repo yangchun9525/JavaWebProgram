@@ -11,7 +11,7 @@
  Target Server Version : 80011
  File Encoding         : 65001
 
- Date: 10/06/2018 09:53:24
+ Date: 10/06/2018 16:57:49
 */
 
 SET NAMES utf8mb4;
@@ -30,5 +30,11 @@ CREATE TABLE `tb_area`  (
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tb_area
+-- ----------------------------
+INSERT INTO `tb_area` VALUES (1, '东苑', 2, '2018-06-10 10:03:34', '2018-06-10 10:03:50');
+INSERT INTO `tb_area` VALUES (2, '西苑', 1, '2018-06-10 11:15:34', '2018-06-10 11:15:50');
 
 SET FOREIGN_KEY_CHECKS = 1;
