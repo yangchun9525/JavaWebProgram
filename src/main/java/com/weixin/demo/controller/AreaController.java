@@ -16,10 +16,12 @@ import java.util.Map;
 @RequestMapping("/superadmin")
 public class AreaController {
     @Autowired
-    private AreaService areaService;
+    public AreaService areaService;
 
     @RequestMapping(value = "/listArea", method = RequestMethod.GET)
-    private Map<String, Object> listArea() {
+    public Map<String, Object> listArea() {
+        System.out.print("listArea");
+        System.out.print("\n");
         Map<String, Object> map = new HashMap<String, Object>();
         List<Area> list = areaService.queryArea();
         map.put("areaList", list);
@@ -27,7 +29,7 @@ public class AreaController {
     }
 
     @RequestMapping(value = "/getareabyid", method = RequestMethod.GET)
-    private Map<String, Object> getAreaById(Integer areaId) {
+    public Map<String, Object> getAreaById(Integer areaId) {
         Map<String, Object> map = new HashMap<String, Object>();
         Area are = areaService.queryAreaById(areaId);
         map.put("area", are);
@@ -35,7 +37,7 @@ public class AreaController {
     }
 
     @RequestMapping(value = "/addarea", method = RequestMethod.POST)
-    private Map<String, Object> addArea(@RequestBody Area area) {
+    public Map<String, Object> addArea(@RequestBody Area area) {
         Map<String, Object> map = new HashMap<String, Object>();
         boolean addFlag = areaService.addArea(area);
         map.put("success", addFlag);
@@ -43,7 +45,7 @@ public class AreaController {
     }
 
     @RequestMapping(value = "/updatearea", method = RequestMethod.POST)
-    private Map<String, Object> updateArea(@RequestBody Area area) {
+    public Map<String, Object> updateArea(@RequestBody Area area) {
         Map<String, Object> map = new HashMap<String, Object>();
         boolean updateFlag = areaService.updateArea(area);
         map.put("success", updateFlag);
@@ -51,7 +53,7 @@ public class AreaController {
     }
 
     @RequestMapping(value = "/deletearea", method = RequestMethod.POST)
-    private Map<String, Object> deleteArea (Integer areaId) {
+    public Map<String, Object> deleteArea(Integer areaId) {
         Map<String, Object> map = new HashMap<String, Object>();
         boolean deleteFlag = areaService.deleteArea(areaId);
         map.put("success", deleteFlag);

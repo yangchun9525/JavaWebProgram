@@ -14,6 +14,7 @@ import javax.sql.DataSource;
 public class TransactionManagementConfiguration implements TransactionManagementConfigurer {
     @Autowired
     private DataSource dataSource;
+
     @Override
     public PlatformTransactionManager annotationDrivenTransactionManager() {
         return new DataSourceTransactionManager(dataSource);

@@ -39,8 +39,8 @@
     </update>
 
     <delete id="deleteArea" parameterType="int">
-       delete from
-       tb_area
-       where area_id=#{areaId}
+        delete from
+        tb_area
+        where area_id=#{areaId}
     </delete>
 </mapper>

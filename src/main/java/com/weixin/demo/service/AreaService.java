@@ -7,12 +7,14 @@ import java.util.List;
 public interface AreaService {
     /**
      * 查询所有的area
+     *
      * @return
      */
     List<Area> queryArea();
 
     /**
      * 根据id查询area
+     *
      * @param areaId
      * @return
      */
@@ -20,6 +22,7 @@ public interface AreaService {
 
     /**
      * 新增
+     *
      * @param area
      * @return
      */
@@ -27,6 +30,7 @@ public interface AreaService {
 
     /**
      * 修改
+     *
      * @param area
      * @return
      */
@@ -34,6 +38,7 @@ public interface AreaService {
 
     /**
      * 删除
+     *
      * @param areaId
      * @return
      */
